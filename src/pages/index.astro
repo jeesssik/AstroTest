@@ -2,7 +2,7 @@
 //import Header from '../components/Header.astro';
 //import Footer from '../components/Footer.astro';
 import '../styles/global.css';
-//
+import Greeting from '../components/Greeting';
 import BaseLayout from '../layouts/BaseLayout.astro';
 const pageTitle = "Home Page desde Base desde Index";
 ---
@@ -21,6 +21,7 @@ const pageTitle = "Home Page desde Base desde Index";
 
     <BaseLayout pageTitle={pageTitle}>
       <h2>My awesome blog subtitle</h2>
+      <Greeting client:load messages={["Hej", "Hallo", "Hola", "Habari"]} />
     </BaseLayout>
    
 
